@@ -1,0 +1,79 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/taskCellContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:elevation="6dp"
+    android:padding="10dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Completion Button -->
+        <ImageButton
+            android:id="@+id/completeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/checkbox"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/unchecked_24"
+            app:tint="@color/lightGray" />
+
+        <!-- Task Name TextView -->
+        <TextView
+            android:id="@+id/name"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="@string/TaskName"
+            android:textColor="@color/black"
+            android:textColorHighlight="?android:attr/textColorHighlight"
+            android:textColorHint="?android:attr/textColorHint"
+            android:textColorLink="?android:attr/textColorLink"
+            android:textSize="18sp" />
+
+        <!-- Due Time TextView -->
+        <TextView
+            android:id="@+id/dueTime"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/DueTime"
+            android:textColor="@color/black"
+            android:textColorHighlight="?android:attr/textColorHighlight"
+            android:textColorHint="?android:attr/textColorHint"
+            android:textColorLink="?android:attr/textColorLink"
+            android:textSize="16sp" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="DeleteTask"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/deleted_24"
+            app:tint="@color/red" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="checkbox">check box</string>
+    <string name="placeholder">place_holder</string>
+    <string name="TaskName">Task Name</string>
+    <string name="DueTime">Due Time</string>
+
+    <string-array name="task_categories">
+        <item>Work</item>
+        <item>Personal</item>
+        <item>Wishlist</item>
+        <item>Other</item>
+    </string-array>
+</resources>

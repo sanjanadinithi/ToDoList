@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray"
+    tools:context=".MainActivity">
+
+    <!-- Task Categories with Horizontal ScrollView -->
+    <HorizontalScrollView
+        android:id="@+id/categoryScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/categoryTabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Category Buttons -->
+            <Button
+                android:id="@+id/allTab"
+                style="@style/CategoryButtonStyle"
+                android:text="All"
+                android:layout_marginEnd="8dp"
+                android:paddingVertical="14dp"
+                android:paddingHorizontal="20dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:id="@+id/workTab"
+                style="@style/CategoryButtonStyle"
+                android:text="Work"
+                android:layout_marginEnd="8dp"
+                android:paddingVertical="14dp"
+                android:paddingHorizontal="20dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:id="@+id/personalTab"
+                style="@style/CategoryButtonStyle"
+                android:text="Personal"
+                android:layout_marginEnd="8dp"
+                android:paddingVertical="14dp"
+                android:paddingHorizontal="20dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:id="@+id/wishlistTab"
+                style="@style/CategoryButtonStyle"
+                android:text="Wishlist"
+                android:layout_marginEnd="8dp"
+                android:paddingVertical="14dp"
+                android:paddingHorizontal="20dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background" />
+
+            <Button
+                android:id="@+id/birthdayTab"
+                style="@style/CategoryButtonStyle"
+                android:text="Birthday"
+                android:layout_marginEnd="8dp"
+                android:paddingVertical="14dp"
+                android:paddingHorizontal="20dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- RecyclerView for the task list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todoListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/categoryScrollView"
+        android:layout_above="@id/newTaskButton"
+        android:clipToPadding="false"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="4dp" />
+
+    <!-- Floating Action Button to create new tasks -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/newTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:elevation="12dp"
+        android:text="Add Task"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:icon="@drawable/baseline_add_24"
+        app:iconTint="@android:color/white"
+        app:iconSize="24dp" />
+
+    <!-- Floating Action Button for Stopwatch Timer -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/stopwatchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:elevation="12dp"
+        android:text="Stopwatch"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:icon="@drawable/baseline_timer_24"
+        app:iconSize="24dp"
+        app:iconTint="@android:color/white" />
+
+</RelativeLayout>
